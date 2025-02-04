@@ -1,3 +1,4 @@
+import { url } from "inspector";
 import type { Config } from "tailwindcss";
 
 export default {
@@ -13,6 +14,12 @@ export default {
         foreground: "var(--foreground)",
       },
     },
+    screens: {
+      '2sm': '350px',
+      'sm' : '422px',
+      'md' : '700px',
+    },
   },
+  
   plugins: [],
 } satisfies Config;
