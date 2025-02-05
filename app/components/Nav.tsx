@@ -1,6 +1,5 @@
 import * as React from "react";
 import { gothic } from "../fonts";
-import Link from "next/link";
 
 const Nav: React.FC = () => {
   return (
