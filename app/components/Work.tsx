@@ -1,5 +1,5 @@
 import React from "react";
-import { lateef, gothic } from "../fonts";
+import { lateef } from "../fonts";
 import Card1 from "./Card1";
 
 const Work = () => {
