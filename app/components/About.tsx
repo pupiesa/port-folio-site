@@ -1,11 +1,12 @@
 import Image from "next/image";
 import React from "react";
 import { lekton, barcode } from "../fonts";
-const Work = () => {
+
+const About = () => {
   return (
     <>
-      <div className="grid grid-flow-row auto-rows-auto grid-cols-12 2sm:grid-flow-col 2sm:grid-rows-1">
-        <div className="flex items-center justify-center col-span-full 2sm:col-span-4 pl-2">
+      <div className="grid grid-flow-col grid-cols-3 mb-[10rem] mt-[6rem]">
+        <div className="flex items-center justify-center col-span-full md:col-span-1 order-1">
           <Image
             src="Ellipse.svg"
             alt="computer"
@@ -13,11 +14,11 @@ const Work = () => {
             height={180}
             className="w-[auto] h-[15rem]"
             priority
-          ></Image>
+          />
         </div>
-        <div className="flex flex-col justify-center text-balance text-center gap-y-4 px-2 2sm:col-span-8 col-span-full">
+        <div className="flex flex-col justify-center text-balance text-center gap-y-4 px-2 col-span-full md:col-span-2 order-2">
           <div
-            className={`${barcode.className} text-[3em] md:text-[4rem] tracking-[0.6rem]`}
+            className={`${barcode.className} text-[4rem] md:text-[7rem] tracking-[0.6rem] mt-[3rem] md:mt-[0px]`}
           >
             WELCOME.
           </div>
@@ -32,4 +33,4 @@ const Work = () => {
   );
 };
 
-export default Work;
+export default About;
