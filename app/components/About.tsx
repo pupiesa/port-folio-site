@@ -5,7 +5,7 @@ import { lekton, barcode } from "../fonts";
 const About = () => {
   return (
     <>
-      <div className="grid grid-flow-col grid-cols-3 mb-[10rem] mt-[6rem]">
+      <div className="grid grid-flow-col grid-cols-3 h-[90vh]">
         <div className="flex items-center justify-center col-span-full md:col-span-1 order-1">
           <Image
             src="Ellipse.svg"
