@@ -1,8 +1,13 @@
+'use client'
 import Image from "next/image";
-import React from "react";
 import { lekton, barcode } from "../fonts";
+import React, { useContext } from 'react';
+import { DataContext } from './DataContext';
 
-const About = () => {
+const About: React.FC = () => {
+  const myContext = useContext(DataContext);
+  const about = (myContext?.data1 as { about?: any })?.about;
+  console.log(about)
   return (
     <>
       <div className="grid grid-flow-col grid-cols-3 h-[90vh]">
@@ -18,14 +23,12 @@ const About = () => {
         </div>
         <div className="flex flex-col justify-center text-balance text-center gap-y-4 px-2 col-span-full md:col-span-2 order-2">
           <div
-            className={`${barcode.className} text-[4rem] md:text-[7rem] tracking-[0.6rem] mt-[3rem] md:mt-[0px]`}
+            className={`${barcode.className} text-[4rem] md:text-[7rem] tracking-[0.6rem] mt-[0px]`}
           >
-            WELCOME.
+          {about ? about[0].key: "about[0].key"}
           </div>
           <div className={`${lekton.className} text-xs md:text-[1em]`}>
-            Hey, I’m Pup!. I’m into web development and currently studying
-            computer engineering. I love messing around with new tools and
-            building cool stuff for the web.
+         {about ? about[0].value: "about[0].value"}
           </div>
         </div>
       </div>
