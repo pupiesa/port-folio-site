@@ -365,7 +365,7 @@ class App {
 
   createMedias(items, bend = 1, textColor, borderRadius, font) {
     const defaultItems = [
-      { image: `cert1.svg`, text: 'Intro FrontEnd dev', link: 'https://example.com/1' },
+      { image: `https://picsum.photos/seed/2/800/600?grayscale`, text: 'Intro FrontEnd dev', link: 'https://example.com/1' },
       { image: `https://picsum.photos/seed/2/800/600?grayscale`, text: 'Desk Setup', link: 'https://example.com/2' },
       { image: `https://picsum.photos/seed/3/800/600?grayscale`, text: 'Waterfall', link: 'https://example.com/3' },
       { image: `https://picsum.photos/seed/4/800/600?grayscale`, text: 'Strawberries', link: 'https://example.com/4' },

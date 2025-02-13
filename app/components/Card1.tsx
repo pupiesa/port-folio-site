@@ -14,13 +14,14 @@ interface Card1Props {
 const Card1: React.FC<Card1Props> = ({ names,desc,imgs,links,gitlinks }) => {
   return (
     <div className="flex flex-col rounded-[20px] border-solid border-2 border-black sm:max-w-[300px] lg:max-w-none sm:mx-auto">
-      <div>
+      <div className="w-[100%] h-[100%] rounded-t-[20px] bg-cover bg-center"
+        style={{ backgroundImage: `url(${imgs})` }}>
         <Image
-          src={imgs}
+          src="/filter.svg"
           alt="pokedex image"
           width={180}
           height={180}
-          className="w-[100%] h-[100%] rounded-t-[20px] bg-[#4A628A]"
+          className="w-[100%] h-[100%] rounded-t-[20px]"
         ></Image>
       </div>
       <div className={`${gothic.className} bg-[#4A628A] flex flex-col p-4 rounded-b-[20px] gap-y-3  h-[100%]`}>
