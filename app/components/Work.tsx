@@ -14,7 +14,6 @@ interface projects {
   image: string;
   link: string;
   git: string;
-  map: Function;
 }
 const Work = () => {
   const myContext = useContext(DataContext);
