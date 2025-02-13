@@ -8,10 +8,10 @@ interface Card1Props {
   desc: string;
   imgs: string;
   links: string;
-  gittlinks: string;
+  gitlinks: string;
 }
 
-const Card1: React.FC<Card1Props> = ({ names,desc,imgs,links,gittlinks }) => {
+const Card1: React.FC<Card1Props> = ({ names,desc,imgs,links,gitlinks }) => {
   return (
     <div className="flex flex-col rounded-[20px] border-solid border-2 border-black sm:max-w-[300px] lg:max-w-none sm:mx-auto">
       <div>
@@ -29,7 +29,8 @@ const Card1: React.FC<Card1Props> = ({ names,desc,imgs,links,gittlinks }) => {
           {desc}
         </div>
         <div className="flex flew-row justify-end gap-x-4">
-          <Link href={links} target="blank">
+          {links && (
+            <Link href={links} target="blank">
             <Image
               src="/internet.svg"
               alt="internet Icon"
@@ -37,8 +38,10 @@ const Card1: React.FC<Card1Props> = ({ names,desc,imgs,links,gittlinks }) => {
               height={30}
               className="w-[auto] h-[1.5em]"
             ></Image>
-          </Link>
-          <Link href={gittlinks} target="blank">
+            </Link>
+          )}  
+          {gitlinks &&
+          (<Link href={gitlinks} target="blank">
             <Image
               src="/git.svg"
               alt="github Icon"
@@ -46,7 +49,7 @@ const Card1: React.FC<Card1Props> = ({ names,desc,imgs,links,gittlinks }) => {
               height={30}
               className="w-[auto] h-[1.5em]"
             ></Image>
-          </Link>
+          </Link>)}
         </div>
       </div>
     </div>

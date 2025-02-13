@@ -7,7 +7,6 @@ import { DataContext } from './DataContext';
 const About: React.FC = () => {
   const myContext = useContext(DataContext);
   const about = (myContext?.data1 as { about?: any })?.about;
-  console.log(about)
   return (
     <>
       <div className="grid grid-flow-col grid-cols-3 h-[90vh]">
@@ -25,10 +24,10 @@ const About: React.FC = () => {
           <div
             className={`${barcode.className} text-[4rem] md:text-[7rem] tracking-[0.6rem] mt-[0px]`}
           >
-          {about ? about[0].key: "about[0].key"}
+          {about ? about[0].key: ""}
           </div>
           <div className={`${lekton.className} text-xs md:text-[1em]`}>
-         {about ? about[0].value: "about[0].value"}
+         {about ? about[0].value: ""}
           </div>
         </div>
       </div>
