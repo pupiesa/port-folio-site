@@ -19,7 +19,7 @@ interface projects {
 const Work = () => {
   const myContext = useContext(DataContext);
   const about = myContext?.data1 as AboutItem;
-  const project = myContext?.data2 as projects;
+  const project = myContext?.data2 as projects[];
   return (
     <>
       {/* work */}

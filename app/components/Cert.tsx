@@ -12,13 +12,13 @@ interface Cert {
     text : string;
     link : string;
     image : string;
-    map : Function;
 }
 
 const Cert = () => {
     const myContext = useContext(DataContext);
     const about = myContext?.data1 as AboutItem;
-    const items = myContext?.data3 as Cert;
+    const items = myContext?.data3 as Cert[];
+    
     const mappedItems = items?.map((item: Cert) => ({
         image: item.image,
         text: item.text,
