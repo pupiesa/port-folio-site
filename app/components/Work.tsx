@@ -3,10 +3,23 @@ import React,{ useContext} from "react";
 import { lateef } from "../fonts";
 import Card1 from "./Card1";
 import { DataContext } from "./DataContext";
+
+interface AboutItem {
+  key: string;
+  value: string;
+}
+interface projects {
+  key: number;
+  name: string;
+  description: string;
+  image: string;
+  link: string;
+  git: string;
+}
 const Work = () => {
   const myContext = useContext(DataContext);
-  const about = (myContext?.data1 as { about?: any })?.about;
-  const project = (myContext?.data2 as { projects?: any})?.projects;
+  const about = (myContext?.data1 as { about?: Array<AboutItem> })?.about;
+  const project = (myContext?.data2 as { projects?: Array<projects>})?.projects;
   const pokedex = [
     "Pokedex",
     "A Next.js project practicing API integration, fetching and displaying Pokémon data from PokeAPI. Styled with Tailwind CSS and deployed on Vercel",

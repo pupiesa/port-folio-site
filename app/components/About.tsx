@@ -4,9 +4,14 @@ import { lekton, barcode } from "../fonts";
 import React, { useContext } from 'react';
 import { DataContext } from './DataContext';
 
+interface AboutItem {
+  key: string;
+  value: string;
+}
+
 const About: React.FC = () => {
   const myContext = useContext(DataContext);
-  const about = (myContext?.data1 as { about?: any })?.about;
+  const about = (myContext?.data1 as { about?: Array<AboutItem> })?.about;
   return (
     <>
       <div className="grid grid-flow-col grid-cols-3 h-[90vh]">

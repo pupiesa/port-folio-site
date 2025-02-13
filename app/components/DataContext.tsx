@@ -4,9 +4,9 @@ import axios from 'axios';
 import useSWR from 'swr';
 
 interface DataContextProps {
-  data1: any[];
-  data2: any[];
-  data3: any[];
+  data1: object;
+  data2: object;
+  data3: object;
 }
 
 export const DataContext = createContext<DataContextProps | undefined>(undefined);
