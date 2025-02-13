@@ -15,13 +15,11 @@ interface Cert {
     image : string;
 }
 
-
 const Cert = () => {
     const myContext = useContext(DataContext);
     const about = (myContext?.data1 as { about?: Array<AboutItem> })?.about
     const items = (myContext?.data3 as { cert?: Array<Cert> })?.cert
-   console.log(myContext)
-    const mappedItems = items?.map((item: any) => ({
+    const mappedItems = items?.map((item: Cert) => ({
         image: item.image,
         text: item.text,
         link: item.link,
