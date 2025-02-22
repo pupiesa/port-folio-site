@@ -16,7 +16,7 @@ This is a personal portfolio website built using **Next.js** and **Tailwind CSS*
 
 ## Google Sheet
 
-The content for this portfolio is managed via Google Sheets. You can view and update the sheet here:
+The content for this portfolio is managed via Google Sheets. I can view and update the sheet here:
 [Google Sheet Link](https://docs.google.com/spreadsheets/d/1Bx2hbXnpoVuIpqfhvCXhXwFQOgMo_wkB8GJ-78fSpDo/edit?usp=sharing)
 
 ## Installation & Setup
