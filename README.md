@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio Site
 
-## Getting Started
+This is a personal portfolio website built using **Next.js** and **Tailwind CSS**, with **Google Sheets API** as a backend for managing and updating content dynamically.
 
-First, run the development server:
+## Technologies Used
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Next.js** - A React framework for server-side rendering and static site generation.
+- **Tailwind CSS** - For responsive and modern UI styling.
+- **Google Sheets API** - Used as a backend to store and manage text content dynamically.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Display projects and certificates dynamically from Google Sheets.
+- Easily add new project cards or certificates via Google Sheets.
+- Fully responsive design.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Google Sheet
 
-## Learn More
+The content for this portfolio is managed via Google Sheets. You can view and update the sheet here:
+[Google Sheet Link](https://docs.google.com/spreadsheets/d/1Bx2hbXnpoVuIpqfhvCXhXwFQOgMo_wkB8GJ-78fSpDo/edit?usp=sharing)
 
-To learn more about Next.js, take a look at the following resources:
+## Installation & Setup
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/pupiesa/port-folio-site.git
+   cd port-folio-site
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
 
-## Deploy on Vercel
+3. Set up environment variables:
+   Create a `.env.local` file and configure the following:
+   ```sh
+   GOOGLE_SHEETS_API_KEY=your-google-sheets-api-key
+   SHEET_ID=your-google-sheet-id
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. Start the development server:
+   ```sh
+   npm run dev
+   ```
+   The application will be available at `http://localhost:3000`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Usage
+
+- To add new projects or certificates, update the linked Google Sheet.
+- Changes will reflect automatically on the site without needing a redeploy.
+
+## Contributing
+
+Feel free to fork this project and submit pull requests for improvements or new features.
+
+## License
+
+This project is licensed under the MIT License.
+
