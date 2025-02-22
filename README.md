@@ -50,10 +50,6 @@ The content for this portfolio is managed via Google Sheets. I can view and upda
 - To add new projects or certificates, update the linked Google Sheet.
 - Changes will reflect automatically on the site without needing a redeploy.
 
-## Contributing
-
-Feel free to fork this project and submit pull requests for improvements or new features.
-
 ## License
 
 This project is licensed under the MIT License.
