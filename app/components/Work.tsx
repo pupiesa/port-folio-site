@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import { lateef } from "../fonts";
 import Card1 from "./Card1";
 import { DataContext } from "./DataContext";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
 interface AboutItem {

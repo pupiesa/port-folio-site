@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import { lekton, barcode } from "../fonts";
 import React, { useContext } from "react";
 import { DataContext } from "./DataContext";
