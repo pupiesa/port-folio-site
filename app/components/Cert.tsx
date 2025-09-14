@@ -1,42 +1,51 @@
-'use client'
-import React,{ useContext} from "react";
+"use client";
+import React, { useContext } from "react";
 import { DataContext } from "./DataContext";
 import CircularGallery from "./CircularGallery";
 import { lateef } from "../fonts";
+import { useTheme } from "next-themes";
 
 interface AboutItem {
-    [key: string]: string;
-  }
+  [key: string]: string;
+}
 interface Cert {
-    key : number;
-    text : string;
-    link : string;
-    image : string;
+  key: number;
+  text: string;
+  link: string;
+  image: string;
 }
 
 const Cert = () => {
-    const myContext = useContext(DataContext);
-    const about = myContext?.data1 as AboutItem;
-    const items = myContext?.data3 as Cert[];
-    
-    const mappedItems = items?.map((item: Cert) => ({
-        image: item.image,
-        text: item.text,
-        link: item.link,
-      })) || [];
-    return (
-        <>
-            {/* certificate */}
-            <div className={`${lateef.className} text-center mt-4`}>
-                <div className="font-bold text-[4rem]">{about ? about["header2"] : ""}</div>
-            </div>
-            <div style={{ height: "600px", position: "relative" }} className="mt-[-4rem] px-1">
-                <CircularGallery
-                    items={mappedItems}
-                />
-            </div>
-        </>
-    );
+  const myContext = useContext(DataContext);
+  const { theme } = useTheme();
+  const about = myContext?.data1 as AboutItem;
+  const items = myContext?.data3 as Cert[];
+
+  const mappedItems =
+    items?.map((item: Cert) => ({
+      image: item.image,
+      text: item.text,
+      link: item.link,
+    })) || [];
+
+  // Use white text in dark mode, dark gray in light mode
+  const textColor = theme === "dark" ? "#ffffff" : "#1f2937";
+  return (
+    <>
+      {/* certificate */}
+      <div className={`${lateef.className} text-center mt-4`}>
+        <div className="font-bold text-[4rem]">
+          {about ? about["header2"] : ""}
+        </div>
+      </div>
+      <div
+        style={{ height: "600px", position: "relative" }}
+        className="mt-[-4rem] px-1"
+      >
+        <CircularGallery items={mappedItems} textColor={textColor} />
+      </div>
+    </>
+  );
 };
 
 export default Cert;

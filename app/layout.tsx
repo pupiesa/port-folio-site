@@ -4,6 +4,7 @@ import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import { Analytics } from "@vercel/analytics/react";
 import { DataProvider } from "./components/DataContext";
+import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata: Metadata = {
   title: "Welcome",
@@ -16,16 +17,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={``}>
-        <DataProvider>
-          <Nav />
-          <main className="mt-[2rem] md:mt-[3rem]">
-            {children}
+    <html lang="en" suppressHydrationWarning>
+      <body className="bg-background text-foreground antialiased">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <DataProvider>
+            <Nav />
+            <main className="pt-8">{children}</main>
+            <Footer />
             <Analytics />
-          </main>
-          <Footer />
-        </DataProvider>
+          </DataProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

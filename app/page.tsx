@@ -5,28 +5,21 @@ import Cert from "./components/Cert";
 
 export default function Home() {
   return (
-    <>
+    <main className="min-h-screen bg-background dark:bg-background">
       <About />
-      <div className="bg-[#233149]">
-        <Image
-          src="Top.svg"
-          alt="section image"
-          width={180}
-          height={180}
-          className="w-full h-[auto] mt-4"
-          priority
-        ></Image>
+      {/* Work Section Background */}
+      <div className="relative">
         <Work />
         <Cert />
         <Image
           src="Bottom.svg"
-          alt="section image"
+          alt="section divider"
           width={180}
           height={180}
-          className="w-full h-[auto]"
+          className="w-full h-auto"
           priority
-        ></Image>
+        />
       </div>
-    </>
+    </main>
   );
 }
