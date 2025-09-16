@@ -33,7 +33,7 @@ const Cert = () => {
   return (
     <>
       {/* certificate */}
-      <div className={`${lateef.className} text-center mt-4`}>
+      <div className={`${lateef.className} text-center mt-4`} id="cert">
         <div className="font-bold text-[4rem]">
           {about ? about["header2"] : ""}
         </div>

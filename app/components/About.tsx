@@ -4,6 +4,7 @@ import React, { useContext } from "react";
 import { DataContext } from "./DataContext";
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import Link from "next/link";
 
 interface AboutItem {
   [key: string]: string;
@@ -56,18 +57,23 @@ const About: React.FC = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
               <Card className="bg-card/50 backdrop-blur-sm">
                 <CardContent className="p-4 text-center">
-                  <h3 className="font-semibold text-primary">Experience</h3>
-                  <p className="text-sm text-muted-foreground">
+                  <Link href="#cert">
+                    <h3 className="font-semibold text-primary">Experience</h3>
+                  </Link>
+                  {/* <p className="text-sm text-muted-foreground">
                     Building digital solutions
-                  </p>
+                  </p> */}
                 </CardContent>
               </Card>
               <Card className="bg-card/50 backdrop-blur-sm">
                 <CardContent className="p-4 text-center">
-                  <h3 className="font-semibold text-primary">Projects</h3>
-                  <p className="text-sm text-muted-foreground">
+                  <Link href="#work">
+                    <h3 className="font-semibold text-primary">Projects</h3>
+                  </Link>
+
+                  {/* <p className="text-sm text-muted-foreground">
                     Creative & innovative
-                  </p>
+                  </p> */}
                 </CardContent>
               </Card>
             </div>

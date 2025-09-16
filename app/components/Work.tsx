@@ -24,7 +24,7 @@ const Work = () => {
   const project = myContext?.data2 as projects[];
 
   return (
-    <section className="py-20 px-4 bg-muted/10 dark:bg-muted/55">
+    <section className="py-20 px-4 bg-muted/10 dark:bg-muted/55" id="work">
       <div className="container mx-auto">
         {/* Section Header */}
         <div className={`text-center mb-16 ${lateef.className}`}>
